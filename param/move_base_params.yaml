@@ -1,6 +1,6 @@
 shutdown_costmaps: False
-recovery_behavior_enabled: False
-clearing_rotation_allowed: False
+recovery_behavior_enabled: True
+clearing_rotation_allowed: True
 obstacle_range: 0.05
 global_costmap/obstacle_layer/enabled: True
 footprint: [[-0.16, -0.16], [-0.16, 0.16], [0.19, 0.16], [0.24, 0.0], [0.19, -0.16]]

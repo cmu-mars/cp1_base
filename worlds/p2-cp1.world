@@ -727,6 +727,12 @@
       </link>
       <static>1</static>
     </model>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>0.626978 -4.32423 54.2199 -0.009631 1.54152 2.24602</pose>
+        <view_controller>orbit</view_controller>
+      </camera>
+    </gui>
     <model name="battery_demo_model">
         <pose>0 0 0 0 0 0</pose>
         <static>false</static>
@@ -790,11 +796,5 @@
             <power_load>6.6</power_load> <!--power load = 6.6 W -->
         </plugin>
     </model>
-    <gui fullscreen='0'>
-      <camera name='user_camera'>
-        <pose>0.626978 -4.32423 54.2199 -0.009631 1.54152 2.24602</pose>
-        <view_controller>orbit</view_controller>
-      </camera>
-    </gui>
   </world>
 </sdf>

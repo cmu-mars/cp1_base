@@ -11,7 +11,7 @@
   <arg name="custom_param_file" value="$(find cp1_base)/param/move_base_params.yaml"/>
 
   <!-- This is the map file that will be used for planning -->
-  <arg name="map_file" value="$(find cp1_base)/maps/wean4.yaml"/>
+  <arg name="map_file" value="$(find cp1_base)/maps/cp1_map_scale40.yaml"/>
 
   <!-- start the map server -->
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
@@ -20,7 +20,7 @@
   <!-- Start the gazebo world, so that obstacles can be mapped -->
   <!-- NOTE: The maze in the world might not be needed if the map server is required -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find cp1_base)/worlds/p2-cp1.world"/>
+    <arg name="world_name" value="$(find cp1_base)/worlds/p2-cp1-1.world"/>
     <arg name="gui" value="true"/>
     <arg name="headless" value="false"/>
   </include>
