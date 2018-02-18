@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot name="power_gazebo" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro name="turtlebot_power_sim">
+  	<gazebo>
+        <plugin name="battery" filename="libbattery_discharge.so">
+            <ros_node>battery_monitor_client</ros_node>
+            <link_name>body</link_name>
+            <battery_name>brass_battery</battery_name>
+            <constant_coef>12.694</constant_coef>
+            <linear_coef>-3.1424</linear_coef>
+            <initial_charge>1.1665</initial_charge>
+            <capacity>1.2009</capacity>
+            <resistance>0.061523</resistance>
+            <smooth_current_tau>1.9499</smooth_current_tau>
+            <charge_rate>2</charge_rate>
+          <!-- If you charge your battery at a 10-amp rate and you need to replace 36 amp-hours in the battery.
+          To determine how long (in hours) you will need to charge your battery, divided 36 by 10 = 3.6 or 3.6 hours to recharge your battery. -->
+        </plugin>
+        <plugin name="consumer" filename="libbattery_consumer.so">
+            <link_name>base_footprint</link_name>
+            <battery_name>brass_battery</battery_name>
+            <power_load>60.6</power_load>
+        </plugin>
+    </gazebo>
+  </xacro:macro>
+  <turtlebot_power_sim/>
+</robot>
