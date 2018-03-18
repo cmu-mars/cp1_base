@@ -242,43 +242,6 @@
         <wall_time>1473451805 354483185</wall_time>
         
       
-        <model name="Wean4">
-          
-        
-          <pose>8 -5 0 0 -0 0</pose>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-      
-        </model>
-        
-      
         <model name="ground_plane">
           
         
@@ -311,8 +274,8 @@
     
       <model name="Wean4">
         
-      
-        <pose>-0.058045 0.021907 0 0 -0 0</pose>
+
+        <pose>-5 0 0 0 -0 0</pose>
         
       
         
@@ -2315,7 +2278,7 @@
           <battery_name>brass_battery</battery_name>
           
             
-          <power_load>6.6</power_load>
+          <power_load>60.6</power_load>
            
           <!--power load = 6.6 W -->
           

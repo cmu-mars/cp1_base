@@ -1,4 +1,4 @@
-image: cp1_map.png
+image: cp1_map_scale40.png
 resolution: 0.025
 origin: [-48, -15, 0]
 occupied_thresh: 0.65
