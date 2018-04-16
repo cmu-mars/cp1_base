@@ -177,15 +177,10 @@
       
     
       <physics default="0" name="default_physics" type="ode">
-        
-      
-        <max_step_size>0.001</max_step_size>
-        
-      
+
+        <max_step_size>0.005</max_step_size>
         <real_time_factor>1</real_time_factor>
-        
-      
-        <real_time_update_rate>1000</real_time_update_rate>
+        <real_time_update_rate>100</real_time_update_rate>
         
       
         <gravity>0 0 -9.8</gravity>
@@ -231,15 +226,12 @@
       
     
       <state world_name="default">
-        
-      
-        <sim_time>9626 246000000</sim_time>
-        
-      
-        <real_time>11932 241302148</real_time>
-        
-      
-        <wall_time>1473451805 354483185</wall_time>
+
+
+        <sim_time>169 900000000</sim_time>
+        <real_time>183 677014821</real_time>
+        <wall_time>1493662410 829795139</wall_time>
+        <iterations>16990</iterations>
         
       
         <model name="ground_plane">
@@ -275,37 +267,8 @@
       <model name="Wean4">
         
 
-        <pose>-5 0 0 0 -0 0</pose>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
+        <pose>-5 0 0 0 0 0</pose>
+
         <static>1</static>
         
     
@@ -2256,7 +2219,7 @@
           <smooth_current_tau>1.9499</smooth_current_tau>
           
             
-          <charge_rate>2</charge_rate>
+          <charge_rate>20</charge_rate>
           
           
           <!-- If you charge your battery at a 10-amp rate and you need to replace 36 amp-hours in the battery.
@@ -2284,7 +2247,14 @@
           
         
         </plugin>
-        
+
+        <plugin filename="libconfig_manager.so" name="configuration_manager">
+
+          <config_list_path>/cp1/config/config_list.json</config_list_path>
+          <default_config>0</default_config>
+          <ros_node>battery_monitor_client</ros_node>
+
+        </plugin>
     
       </model>
       

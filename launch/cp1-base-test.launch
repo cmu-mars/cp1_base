@@ -89,5 +89,9 @@
 
   <!--<node pkg="rosservice" type="rosservice" name="tok" args="call &#45;&#45;wait /mobile_base/kinect/mode '{mode : 0}'"/>-->
 
+  <!--if you remove it, make sure you start new roscore, as otherwise the param stays on the parameter server-->
+  <param name ="/use_sim_time" value="true"/>
+
+  <node name="ig_interpreter" pkg="ig_action_server" type="ig_server.py" output="screen"/>
 
 </launch>
