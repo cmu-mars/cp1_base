@@ -1,5 +1,8 @@
 FROM cmu-mars/gazebo
 
+RUN sudo apt-get update && \
+    sudo apt-get install -y ros-kinetic-mrpt-navigation libignition-math2-dev
+
 ADD cp1_base src/cp1_base
 
 RUN . /opt/ros/kinetic/setup.sh && \
