@@ -2241,7 +2241,7 @@
           <battery_name>brass_battery</battery_name>
           
             
-          <power_load>60.6</power_load>
+          <power_load>50</power_load>
            
           <!--power load = 6.6 W -->
           
@@ -2250,7 +2250,7 @@
 
         <plugin filename="libconfig_manager.so" name="configuration_manager">
 
-          <config_list_path>/cp1/config/config_list.json</config_list_path>
+          <config_list_path>/cp1/config_list.json</config_list_path>
           <default_config>0</default_config>
           <ros_node>battery_monitor_client</ros_node>
 
