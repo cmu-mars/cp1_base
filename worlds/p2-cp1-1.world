@@ -2250,7 +2250,7 @@
 
         <plugin filename="libconfig_manager.so" name="configuration_manager">
 
-          <config_list_path>/cp1/config_list.json</config_list_path>
+          <config_list_path>/cp1/config_list_true.json</config_list_path>
           <default_config>0</default_config>
           <ros_node>battery_monitor_client</ros_node>
 
