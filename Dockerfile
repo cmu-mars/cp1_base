@@ -16,8 +16,9 @@ RUN git clone https://github.com/cmu-mars/brass_gazebo_config_manager.git src/br
 RUN git clone https://github.com/cmu-mars/model-learner.git src/model_learner
 
 RUN sudo apt-get install -y python-pip
+RUN sudo apt-get -y install python3-pip
 
-RUN python -m pip install --upgrade src/model_learner
+RUN python3 -m pip install --upgrade src/model_learner
 
 RUN . /opt/ros/kinetic/setup.sh && \
     catkin_make
