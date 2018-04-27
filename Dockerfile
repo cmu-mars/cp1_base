@@ -17,7 +17,7 @@ RUN git clone https://github.com/cmu-mars/model-learner.git src/model_learner
 
 RUN sudo apt-get install -y python-pip
 
-RUN python -m pip install --upgrade src/model_learner/learner
+RUN python -m pip install --upgrade src/model_learner
 
 RUN . /opt/ros/kinetic/setup.sh && \
     catkin_make
