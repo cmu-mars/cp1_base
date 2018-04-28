@@ -4,7 +4,7 @@ RUN sudo apt-get update && \
     sudo apt-get install -y libignition-math2-dev
 
 ADD cp1_base src/cp1_base
-ADD cp1 ../cp1
+ADD cp1_base/cp1 ../cp1
 
 RUN . /opt/ros/kinetic/setup.sh && \
     sudo chown -R $(whoami):$(whoami) . &&\
