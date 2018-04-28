@@ -19,6 +19,8 @@ RUN git clone https://github.com/cmu-mars/cp1_controllers.git src/cp1_controller
 RUN sudo apt-get install -y python-pip
 RUN sudo apt-get install -y python3-pip
 
+RUN sudo pip3 install catkin_pkg rospkg numpy psutil defusedxml flask-script
+
 # installing packages
 RUN python3 -m pip install --upgrade src/model_learner
 RUN python3 -m pip install --upgrade src/cp1_controllers
