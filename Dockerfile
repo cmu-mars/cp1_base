@@ -5,6 +5,7 @@ RUN sudo apt-get update && \
 
 ADD cp1_base src/cp1_base
 ADD cp1_base/cp1 ../cp1
+ADD cp1_base/cp1/test-ready.json ../
 
 RUN . /opt/ros/kinetic/setup.sh && \
     sudo chown -R $(whoami):$(whoami) . &&\
@@ -24,7 +25,6 @@ RUN sudo pip3 install catkin_pkg rospkg numpy psutil defusedxml flask-script
 # installing packages
 RUN python3 -m pip install --upgrade src/model_learner
 RUN python3 -m pip install --upgrade src/cp1_controllers
-
 
 RUN . /opt/ros/kinetic/setup.sh && \
     catkin_make
