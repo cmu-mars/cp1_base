@@ -94,4 +94,6 @@
 
   <node name="ig_interpreter" pkg="ig_action_server" type="ig_server.py" output="screen"/>
 
+  <node pkg="tf" type="static_transform_publisher" name="map_to_odom" args="0.0 0.0 0.0 0 0 0.0 /map /odom 1000"/>
+
 </launch>
