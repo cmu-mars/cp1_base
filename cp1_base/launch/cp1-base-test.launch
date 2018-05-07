@@ -21,8 +21,8 @@
   <!-- NOTE: The maze in the world might not be needed if the map server is required -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(find cp1_base)/worlds/p2-cp1-1.world"/>
-    <arg name="gui" value="false"/>
-    <arg name="headless" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
   </include>
 
   <!-- Spawn the turtlebot -->
@@ -32,19 +32,19 @@
         args="-x 0 -y 0 -unpause -urdf -param robot_description -model mobile_base"/>
 
   <!--<include file="$(find turtlebot_gazebo)/launch/includes/$(arg base).launch.xml">-->
-    <!--<arg name="base" value="$(arg base)"/>-->
-    <!--<arg name="stacks" value="$(arg stacks)"/>-->
-    <!--<arg name="3d_sensor" value="$(arg 3d_sensor)"/>-->
+  <!--<arg name="base" value="$(arg base)"/>-->
+  <!--<arg name="stacks" value="$(arg stacks)"/>-->
+  <!--<arg name="3d_sensor" value="$(arg 3d_sensor)"/>-->
   <!--</include>-->
 
   <!--<include file="$(find turtlebot_bringup)/launch/3dsensor.launch">-->
-    <!--<arg name="rgb_processing" value="false" />-->
-    <!--<arg name="depth_registration" value="false" />-->
-    <!--<arg name="depth_processing" value="false" />-->
+  <!--<arg name="rgb_processing" value="false" />-->
+  <!--<arg name="depth_registration" value="false" />-->
+  <!--<arg name="depth_processing" value="false" />-->
 
-    <!--&lt;!&ndash; We must specify an absolute topic name because if not it will be prefixed by "$(arg camera)".-->
-         <!--Probably is a bug in the nodelet manager: https://github.com/ros/nodelet_core/issues/7 &ndash;&gt;-->
-    <!--<arg name="scan_topic" value="/scan" />-->
+  <!--&lt;!&ndash; We must specify an absolute topic name because if not it will be prefixed by "$(arg camera)".-->
+  <!--Probably is a bug in the nodelet manager: https://github.com/ros/nodelet_core/issues/7 &ndash;&gt;-->
+  <!--<arg name="scan_topic" value="/scan" />-->
   <!--</include>-->
 
   <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
@@ -93,7 +93,5 @@
   <param name ="/use_sim_time" value="true"/>
 
   <node name="ig_interpreter" pkg="ig_action_server" type="ig_server.py" output="screen"/>
-
-  <node pkg="tf" type="static_transform_publisher" name="map_to_odom" args="0.0 0.0 0.0 0 0 0.0 /map /odom 1000"/>
 
 </launch>
