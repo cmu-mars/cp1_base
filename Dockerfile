@@ -5,7 +5,6 @@ RUN sudo apt-get update && \
 
 ADD cp1_base src/cp1_base
 
-
 RUN . /opt/ros/kinetic/setup.sh && \
     sudo chown -R $(whoami):$(whoami) .
 
