@@ -2219,7 +2219,7 @@
           <smooth_current_tau>1.9499</smooth_current_tau>
           
             
-          <charge_rate>20</charge_rate>
+          <charge_rate>200</charge_rate>
           
           
           <!-- If you charge your battery at a 10-amp rate and you need to replace 36 amp-hours in the battery.
