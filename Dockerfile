@@ -14,7 +14,8 @@ RUN . /opt/ros/kinetic/setup.sh && \
 
 RUN sudo apt-get install -y python-pip
 RUN sudo apt-get install -y python3-pip
-RUN sudo pip3 install catkin_pkg rospkg numpy psutil defusedxml flask-script keras tensorflow
+RUN sudo apt-get install -y python3-matplotlib
+RUN sudo pip3 install catkin_pkg rospkg numpy psutil defusedxml flask-script GPy GPyOpt 
 
 # Clonning plugins and packages
 ADD https://api.github.com/repos/cmu-mars/brass_gazebo_battery/git/refs/heads/ bgb_version.json
@@ -25,7 +26,6 @@ ADD https://api.github.com/repos/cmu-mars/model-learner/git/refs/heads/ ml_versi
 RUN git clone https://github.com/cmu-mars/model-learner.git src/model_learner
 ADD https://api.github.com/repos/cmu-mars/cp1_controllers/git/refs/heads/ ctrl_version.json
 RUN git clone https://github.com/cmu-mars/cp1_controllers.git src/cp1_controllers
-
 
 # installing packages
 RUN pip3 install --upgrade src/model_learner
